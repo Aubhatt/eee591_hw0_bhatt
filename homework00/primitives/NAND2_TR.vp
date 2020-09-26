@@ -1,0 +1,24 @@
+////////////////////////////////////////////////////////////////////////
+// NAND2_TR.vp  
+//;
+//; # Any Line that starts with a slash slash semi-colon is perl
+//; # So we can follow our good habits from before
+//; use strict ;                   # Use a strict interpretation
+//; use warnings FATAL=>qw(all);   # Turn warnings into errors
+//; use diagnostics ;              # Print helpful info, for errors
+//;
+
+module `mname`
+  ( input  wire A,
+    input  wire B,
+    output wire Z );
+
+   supply0 	 Vss;
+   supply1 	 Vcc;
+   wire 	 n0;
+
+   // Z = ! (AB);
+   
+   // Your design here
+
+endmodule

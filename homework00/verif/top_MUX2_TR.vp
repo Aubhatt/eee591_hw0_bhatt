@@ -1,0 +1,37 @@
+/////////////////////////////////////////////////////////////////////////
+// top_MUX2_TR.vp
+//
+
+//; use strict ;
+//; use warnings FATAL=>qw(all);
+//; use diagnostics ;
+
+module `mname`();
+   
+
+   logic Z, Z_g;
+   logic A, B, C, D;
+
+//; my $gt = generate_base('MUX2_TR', 'my_MUX2_TR');
+   `$gt->instantiate` (.*);
+     
+   assign Z_g = !(A && B || C && D); // Gold Model
+   
+   int 	 i;
+   initial begin
+      for(i=0;i<16;i++) begin
+	 {A,B,C,D}=i;
+	 #2; 
+      end 
+      $finish(1);
+   end
+   
+   always @* begin
+      #1;
+      $display("%4b -> %b (%b)",i,Z,Z_g);
+      assert(Z_g==Z);
+   end
+
+endmodule 
+
+

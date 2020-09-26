@@ -1,0 +1,37 @@
+/////////////////////////////////////////////////////////////////////////
+// top_INV_TR.vp
+//
+
+//; use strict ;
+//; use warnings FATAL=>qw(all);
+//; use diagnostics ;
+
+module `mname`();
+   
+
+   logic Z, Z_g;
+   logic A;
+
+//; my $gt = generate_base('INV_TR', 'my_INV_TR');
+   `$gt->instantiate` (.*);
+     
+   assign Z_g = ~A; // Gold Model
+   
+   int 	 i;
+   initial begin
+      for(i=0;i<2;i++) begin
+	 A=i;
+	 #2; 
+      end 
+      $finish(1);
+   end
+   
+   always @* begin
+      #1;
+      $display("%1b -> %b (%b)",i,Z,Z_g);
+      assert(Z_g==Z);
+   end
+
+endmodule 
+
+
