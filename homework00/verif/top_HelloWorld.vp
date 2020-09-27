@@ -11,14 +11,6 @@ module `mname` ();
     initial
         $display("[eee591] Agent Hans Handsome Says Hello");
 
-    intial begin
-        for(int i=0; i!=10000; i++) begin
-        #1000 // 1ns delay
-            a = $random();
-            b = $random();
-        end
-    end
-
     //; my $region = "my_HelloWorld";
     // Capture the waves in top_HellowWorld
     initial begin
@@ -40,6 +32,14 @@ module `mname` ();
     logic [`$bW-1`:0] a;
     logic [`$bW-1`:0] b;
     logic [`$bW`:0] z;
+
+    initial begin
+        for(int i=0; i!=10000; i++) begin
+        #1000 // 1ns delay
+            a = $random();
+            b = $random();
+        end
+    end
 
     // # Then we can instantiate our DUT
     `$hw->instantiate` (.a(a),.b(b),.z(z));
