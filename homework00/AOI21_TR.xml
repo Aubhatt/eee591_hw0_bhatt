@@ -1,0 +1,16 @@
+<HierarchyTop>
+  <BaseModuleName>top_AOI21_TR</BaseModuleName>
+  <ImmutableParameters></ImmutableParameters>
+  <InstanceName>top_AOI21_TR</InstanceName>
+  <Parameters></Parameters>
+  <SubInstances>
+    <SubInstanceItem>
+      <BaseModuleName>AOI21_TR</BaseModuleName>
+      <ImmutableParameters></ImmutableParameters>
+      <InstanceName>my_AOI21_TR</InstanceName>
+      <Parameters></Parameters>
+      <UniqueModuleName>AOI21_TR</UniqueModuleName>
+    </SubInstanceItem>
+  </SubInstances>
+  <UniqueModuleName>top_AOI21_TR</UniqueModuleName>
+</HierarchyTop>
