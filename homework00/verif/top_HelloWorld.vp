@@ -19,7 +19,7 @@ module `mname` ();
 
 logic ["$bW-1":0] a;
 logic ["$bW-1":0] b;
-logic ["$bW':0] z;
+logic ["$bW":0] z;
 
 // # Then we can instantiate our DUT
 `$hw->instantiate` (.a(a),.b(b),.z(z));

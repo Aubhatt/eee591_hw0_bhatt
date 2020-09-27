@@ -20,14 +20,14 @@
 // We use the gen2 builtin mname to indicate the module name
 // This is because module names are derived from the generator
 // file name, where uniquely generated files are given a unique name.
-module 'mname' (
-    input logic ['$bW-1':0] a,
-    input logic ['$bW-1':0] b,
+module `mname` (
+    input logic ["$bW-1":0] a,
+    input logic ["$bW-1":0] b,
 
     input logic clk,
     input logic rst,
     
-    output logic ['$bW':0] z
+    output logic ["$bW":0] z
     );
 // Empty module
-endmodule: 'mname'
+endmodule
