@@ -29,5 +29,7 @@ module `mname` (
     
     output logic [`$bW`:0] z
     );
-// Empty module
-endmodule
+
+    assign z = a + b;
+
+endmodule: `mname`
