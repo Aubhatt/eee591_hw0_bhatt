@@ -32,4 +32,4 @@ module `mname` (
 
     assign z = a + b;
 
-endmodule: `mname`
+endmodule

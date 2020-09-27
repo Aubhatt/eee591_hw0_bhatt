@@ -43,4 +43,4 @@ module `mname` ();
 
     // # Then we can instantiate our DUT
     `$hw->instantiate` (.a(a),.b(b),.z(z));
-endmodule: `mname`
+endmodule
