@@ -7,6 +7,10 @@
 
 // A top module has no inputs or outputs
 module 'mname' ();
+
+    initial
+        $display("[eee591] Agent Hans Handsome Says Hello");
+
 //; #Instantiating a module in gen2 requires an extra
 //; # step where we generate the module, then instance it
 //; my $hw = generate('HelloWorld', 'my_HelloWorld');
