@@ -6,7 +6,7 @@
 //; use diagnostics;
 
 // A top module has no inputs or outputs
-module 'mname' ();
+module `mname` ();
 
     initial
         $display("[eee591] Agent Hans Handsome Says Hello");
@@ -17,10 +17,10 @@ module 'mname' ();
 //; # We can querry the value of parameters
 //; my $bW = $hw->get_param("bitWidth");
 
-logic ['$bW-1':0] a;
-logic ['$bW-1‘:0] b;
-logic ['$bW':0] z;
+logic ["$bW-1":0] a;
+logic ["$bW-1":0] b;
+logic ["$bW':0] z;
 
 // # Then we can instantiate our DUT
-'$hw->instantiate' (.a(a),.b(b),.z(z));
-endmodule: 'mname'
+`$hw->instantiate` (.a(a),.b(b),.z(z));
+endmodule: `mname`
