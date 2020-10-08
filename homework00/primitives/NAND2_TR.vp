@@ -21,4 +21,10 @@ module `mname`
    
    // Your design here
 
+   rpmos M10( Z, Vcc, A);
+   rpmos M11( Z, Vcc, B);
+
+   rnmos M00( Z, n0, A);
+   rnmos M01( n0, Vss, B);
+
 endmodule
