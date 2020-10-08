@@ -22,7 +22,7 @@ module `mname`
 
    // Your design here
    INV_TR M0(.A(A), .Z(n0));
-   INV_TR M0(.A(B), .Z(n1));
-   OAI22_TR M1(.A(A), .B(n1), .C(n0), .D(B), .Z(Z));
+   INV_TR M1(.A(B), .Z(n1));
+   OAI22_TR M2(.A(A), .B(n1), .C(n0), .D(B), .Z(Z));
    
 endmodule
