@@ -22,7 +22,7 @@ module `mname`
    // Z = (A^B);
 
    // Your design here
-   INV_TR M0(.A(A), .Z(n0));
+   //INV_TR M0(.A(A), .Z(n0));
    rnmos M30(     A_,        Vss,          A);
    rpmos M31(     B_,        Vcc,          A);
 
