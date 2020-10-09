@@ -23,12 +23,12 @@ module `mname`
 
    // Your design here
    INV_TR M0(.A(A), .Z(n0));
-   rnmos M00(     A_,        Vss,          A);
-   rpmos M10(     B_,        Vcc,          A);
+   rnmos M30(     A_,        Vss,          A);
+   rpmos M30(     B_,        Vcc,          A);
 
    //INV_TR M1(.A(B), .Z(n1));
-   rnmos M00(     n1,        Vss,          B);
-   rpmos M10(     n1,        Vcc,          B);
+   rnmos M20(     n1,        Vss,          B);
+   rpmos M20(     n1,        Vcc,          B);
 
    //OAI22_TR M2(.A(A), .B(B_), .C(A_), .D(B), .Z(Z));
    rpmos M10( n0, Vcc, A);
