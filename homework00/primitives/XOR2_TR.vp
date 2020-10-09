@@ -17,12 +17,29 @@ module `mname`
    supply1 	 Vcc;
    wire 	 n0, n1, n2;
    wire          Y;
+   wire A_, B_;
    
    // Z = (A^B);
 
    // Your design here
    INV_TR M0(.A(A), .Z(n0));
-   INV_TR M1(.A(B), .Z(n1));
-   OAI22_TR M2(.A(A), .B(n1), .C(n0), .D(B), .Z(Z));
+   rnmos M00(     A_,        Vss,          A);
+   rpmos M10(     B_,        Vcc,          A);
+
+   //INV_TR M1(.A(B), .Z(n1));
+   rnmos M00(     n1,        Vss,          B);
+   rpmos M10(     n1,        Vcc,          B);
+
+   //OAI22_TR M2(.A(A), .B(B_), .C(A_), .D(B), .Z(Z));
+   rpmos M10( n0, Vcc, A);
+   rpmos M11( n1, Vcc, A_);
+   rpmos M12( Z, n0, B_);
+   rpmos M13( Z, n1, B);
+
+   rnmos M00( Z, n2, A);
+   rnmos M01( Z, n2, B_);
+   rnmos M02( n2, Vss, A_);
+   rnmos M03( n2, Vss, B);
+
    
 endmodule
